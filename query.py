@@ -9,6 +9,7 @@ from pickle import load
 from time import clock
 
 from segword import cut_for_search
+from FitTfidf import TFIDF
 class dealquery(object):
 	"""docstring for dealquery"""
 	def __init__(self, sentence):
@@ -29,10 +30,7 @@ class dealquery(object):
 	def count(self,D):
 		s = 0
 		for word in self.words:
-			if word in D.keys():
-				s += D[word]
-			else:
-				pass
+			s +=D.get(word,0)
 		return s
 	def sort_by_count(self,d):  
     	#字典排序  
