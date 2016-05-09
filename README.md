@@ -5,4 +5,5 @@ segword 用于分词，并将每一个文件夹下的分词结果以字典的形
 fit_idf 计算全部文档（即该语料库）的IDF值，并以dict形式dump到本地;
 FitTfIdf 计算各文档的TF-IDF值；
 mydatebase用于将文档的TF-IDF值保存至ZODB关系数据库中；
-query用于查询
+query用于查询；
+query_result 用于对查询结果的评价分析
