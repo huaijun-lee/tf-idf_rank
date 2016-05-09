@@ -10,7 +10,7 @@ from pickle import load
 class MyZODB(object):
     def __init__(self, path):
         self.storage = FileStorage.FileStorage(path)
-        self.db = DB(self.storage)
+        self.db = DB(self.storage,create=True, large_record_size=999)
         self.connection = self.db.open()
         self.dbroot = self.connection.root()       
     def close(self):

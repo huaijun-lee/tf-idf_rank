@@ -57,5 +57,6 @@ class TFIDF(object):
             folderdict = self.totfidf(bigidf,segdict)
             name = str(seg).split('_')[1]
             dump(folderdict,open(path.join(databaseurl,name + '.pickle'),'wb'))
+
 tfidf = TFIDF()
 tfidf.main()			
